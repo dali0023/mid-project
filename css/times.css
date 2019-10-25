@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab|Hind+Guntur&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+:root{
+    /*
+    primary = hsl(199,29%,51%);
+    secondary =  hsl(198,18%,64%);
+    */
+    --primary1: hsl(199, 86%, 40%);
+    --primary2:	hsl(199, 72%, 74%);
+    --primary3:	hsl(199, 29%, 80%);
+  
+    --secondary1:hsl(198, 18%, 35%);
+    --secondary2:hsl(198, 56%, 97%);
+    --secondary3:hsl(198, 43%, 90%);
+   
+    --grey1:hsl(0, 0%, 10%);
+    --grey2:hsl(0, 0%, 30%);
+    --grey3:hsl(0, 0%, 50%);
+    --grey4:hsl(0, 0%, 100%);
+  }
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 1em;
+    line-height: 1.6;
+    font-family: 'Hind Guntur','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary2);
+}
+h1, h2, h3, h4{
+    font-family: 'Arbutus Slab','Times New Roman', Times, serif;
+}
+p{
+    
+}
+.container{
+    background-color: var(--secondary3);
+    width: 80vw;
+    max-width: 1500px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 6px var(--primary1);
+}
+.subnav{
+    display: flex;
+    justify-content: flex-end;
+}
+.subnav a{
+    padding: 8px;
+    text-decoration: none;
+    color: var(--primary1);
+}
+.subnav a:hover{
+    color: var(--secondary1);
+}
+.subnav>a:nth-of-type(1){
+    text-decoration: underline;
+}
+.mainnav{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--primary1);
+    position: sticky;
+    top: 0;
+}
+.mainnav a{
+    padding: 0.938em;
+    text-decoration: none;
+    font-size: 1.125em;
+    color: var(--grey4);
+}
+
+.mainnav a:hover{
+    background-color: var(--grey4);
+    color: var(--grey1);
+}
+
+.masthead{
+    background-color: var(--secondary3);
+}
+.times-logo{
+    width: 100%;
+    height: auto;
+}
+.masthead h1{
+    color: var(--primary1);
+    text-shadow: 2px 2px 2px var(--secondary2);
+}
+.content{
+    padding: 0em 2.5em;
+}
+
+.content .story{
+    background-color: var(--secondary2);
+    border: 1px solid var(--grey4);
+    border-left: 0.313em solid var(--primary1);
+    margin-top: 1.25em;
+    padding: 0.625em 1.875em;
+    
+}
+.story.lead-story{
+    box-shadow: 0.313em 0.313em 0.5em var(--grey3);  
+}
+.story.lead-story .story-title{
+    text-decoration: underline;
+    cursor: pointer;
+}
+h1.story-title{
+    color: var(--primary1);
+    text-shadow: 0.125em 0.125em 0.125em var(--primary3);
+    
+}
+.story img{
+    float: left;
+    padding:0.438em 1.25em 0.438em 0em;
+    max-width: 100%;
+    height: auto;
+ 
+}
+.story p{
+    line-height: 1.875em;
+    text-align: justify;
+    color: var(--grey2);
+}
+.story blockquote{
+    font-weight: bold;
+    font-style: italic;
+    padding: 0.625em 0.625em 0.625em 0em;
+    quotes: "\201E" "\201D";
+}
+.story blockquote::before{
+    content: open-quote;
+}
+.story blockquote::after{
+    content: close-quote;
+}
+.story p.byline{
+    padding: 0.063em 0em 0.625em 0em;
+}
+p.byline span.author{
+    color: var(--grey1);
+    font-weight: bold;   
+    
+}
+p.byline span.author:hover{ 
+    color: var(--primary1); 
+    cursor: pointer;
+}
+p.byline span.author::before{
+    content: "\f4ff";
+   font-family: 'Font Awesome\ 5 Free';
+}
+
+p.byline span.pub{
+    font-weight: bold;
+    color: var(--grey1);
+}
+p.byline span.pub:hover{ 
+    color: var(--primary1); 
+    cursor: pointer;
+}
+p.byline span.pub::before{
+    content: "\f017";
+    font-family: 'Font Awesome\ 5 Free';
+}
+.foot{
+    margin-top: 0.938em;
+    padding: 0.938em;
+    background-color: var(--primary1);
+    
+}
+.foot p{
+    text-align: center;
+    color: var(--grey4);
+}
+
+@media screen and (max-width: 680px) {
+    
+    .mainnav{
+        background-color: var(--primary1);
+        flex-direction: column;
+        font-size: 1.25em;
+        text-align: center;
+    }
+   
+    .mainnav>a{
+        border-bottom: 0.125em solid var(--primary3);  
+    }
+    .mainnav>a:first-child{
+        border-top: 0.125em solid var(--primary1);
+    }
+    
+.mainnav>a:hover{
+background-color: var(--grey1);
+color: var(--grey4)
+}
+.content{
+    padding: 0;
+}
+.content .story{
+    background-color: var(--secondary2);
+    border: 0.063em solid var(--grey4);
+    border-left: 0.313em solid var(--primary1);
+    margin-top: 1.25em;
+    padding: 0.625em 0.625em;
+}
+
+
+  }
